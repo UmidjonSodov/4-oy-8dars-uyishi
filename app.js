@@ -1,6 +1,4 @@
  
- 
- //    object masalalarin 
 
  
 
