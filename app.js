@@ -91,9 +91,9 @@
 //     Banan: 20000
 //   };
   
-//   const total = Object.values(products).reduce((sum, price) => sum + price, 0);
+//   const sm = Object.values(products).reduce((sum, price) => sum + price, 0);
   
-//   console.log(total);
+//   console.log(sm);
 
 
 // 6- masala 
@@ -220,3 +220,270 @@
 //   }
 
 
+
+// 11-masala
+
+// const products = [
+//     { name: "Product 1", price: 20000, discount: 10, quantity: 5 },
+//     { name: "Product 2", price: 10000, discount: 20, quantity: 4 },
+//     { name: "Product 3", price: 15000, discount: 8, quantity: 10 },
+//     { name: "Product 4", price: 18000, discount: 5, quantity: 6 },
+//     { name: "Product 5", price: 5000, discount: 10, quantity: 16 },
+// ];
+
+// const sm = products.reduce((sum, product) => {
+//     const discountedPrice =
+//         product.price - (product.price * product.discount) / 100;
+//     return sum + discountedPrice * product.quantity;
+// }, 0);
+
+// console.log("Umumiy summa:", sm);
+
+
+// 12-masala
+
+// const obj = {
+//     it: 20,
+//     mushuk: 10,
+//     sigir: 200,
+//     tovuq: 2,
+// };
+
+// const result = Object.entries(obj).flat();
+// console.log(result);
+
+
+// 13-masala
+
+// const grades = [
+//     { name: "Fizika", grade: 4, kredit: 6 },
+//     { name: "Matematika", grade: 5, kredit: 6 },
+//     { name: "Tarix", grade: 4, kredit: 4 },
+//     { name: "Dasturlash", grade: 5, kredit: 8 },
+//     { name: "Kibrxavfsizlik", grade: 4, kredit: 8 },
+// ];
+
+// const sm = grades.reduce(
+//     (acc, subject) => {
+//         acc.soft += subject.grade * subject.kredit;
+//         acc.smCredits += subject.kredit;
+//         return acc;
+//     },
+//     { soft: 0, smCredits: 0 }
+// );
+
+// const GPA = sm.soft / sm.smCredits;
+
+// console.log("GPA:", GPA.toFixed(2));
+
+
+// 14-masala
+
+// const rightAnswers = {
+//     1: "B",
+//     2: "A",
+//     3: "C",
+//     4: "D",
+//     5: "B",
+//     6: "C",
+//     7: "A",
+//     8: "D",
+//     9: "A",
+//     10: "B",
+// };
+
+// const myAnswers = {
+//     1: "C",
+//     2: "A",
+//     3: "D",
+//     4: "D",
+//     5: "B",
+//     6: "C",
+//     7: "B",
+//     8: "C",
+//     9: "A",
+//     10: "C",
+// };
+
+// let correct = 0;
+// let wrong = 0;
+
+// for (let key in rightAnswers) {
+//     if (rightAnswers[key] === myAnswers[key]) {
+//         correct++;
+//     } else {
+//         wrong++;
+//     }
+// }
+
+// console.log("To‘g‘ri javoblar soni:", correct);
+// console.log("Noto‘g‘ri javoblar soni:", wrong);
+
+
+// 15-masala
+
+// const obj = { a: 2, b: 3, c: 4, d: 6 };
+
+// function getMultipleValues(n) {
+//     const res = {};
+//     for (let key in obj) {
+//         res[key] = obj[key] * n;
+//     }
+//     return res;
+// }
+
+// let n = 3;
+// const result = getMultipleValues(n);
+// console.log(result);
+
+
+// 16-masala
+
+// const product = {
+//   name: "Iphone 14",
+//   company: {
+//     name: "Apple",
+//     price: "200 mlrd",
+//     founder: {
+//       firstName: "Steve",
+//       lastName: "Jobs",
+//       birthDate: 1950,
+//     },
+//   },
+// };
+
+
+// const {
+//   name: productName,
+//   company: {
+//     name: companyName,
+//     price: companyPrice,
+//     founder: { firstName, lastName, birthDate }
+//   }
+// } = product;
+
+// console.log(productName);   
+// console.log(companyName);   
+// console.log(companyPrice);  
+// console.log(firstName);     
+// console.log(lastName);      
+// console.log(birthDate);     
+
+
+
+// 17-masala
+
+
+// const smt = [
+//     { name: "Umidjon", protcent: 95 },
+//     { name: "Ali", protcent: 78 },
+//     { name: "Fayozbek", protcent: 88 },
+//     { name: "Xumoyun", protcent: 60 },
+// ];
+
+
+// const smtech = smt.reduce((sum, p) => sum + p.protcent, 0) / smt.length;
+
+
+// const updatedSmt = smt.map((sm) => ({
+//     ...sm,
+//     status: sm.protcent >= 70 ? "o‘tgan" : "yiqilgan",
+// }));
+
+  // console.log("O‘rtacha protcent:", smtech.toFixed(2));
+  // console.log(updatedSmt);
+
+
+  // 18-masala
+
+  // const pupils = [
+  //     { name: "Umidjon", protcent: 95 },
+  //         { name: "Ali", protcent: 78 },
+  //         { name: "Fayozbek", protcent: 88 },
+  //         { name: "Xumoyun", protcent: 60 },
+  // ];
+
+
+  // const smtech = pupils.reduce((sum, p) => sum + p.protcent, 0) / pupils.length;
+
+
+  // const updatedPupils = pupils.map((pupil) => {
+  //     let grade;
+
+  //     if (pupil.protcent >= 90) grade = 5;
+  //     else if (pupil.protcent >= 80) grade = 4;
+  //     else if (pupil.protcent >= 70) grade = 3;
+  //     else grade = 2;
+
+  //     return {
+  //         ...pupil,
+  //         status: pupil.protcent >= 70 ? "o‘tgan" : "yiqilgan",
+  //         grade,
+  //     };
+  // });
+
+  // console.log("O‘rtacha protcent:", smtech.toFixed(2));
+  // console.log(updatedPupils);
+
+
+  // 19-masala
+
+
+  // const pupils = [
+  //     { name: "Umidjon", protcent: 95 },
+  //             { name: "Ali", protcent: 78 },
+  //             { name: "Fayozbek", protcent: 88 },
+  //             { name: "Xumoyun", protcent: 60 },
+  // ];
+
+ 
+  // const smtech =
+  //     pupils.reduce((sum, p) => sum + p.protcent, 0) / pupils.length;
+
+
+  // const updatedPupils = pupils.map((pupil) => {
+  //     let grade;
+
+  //     if (pupil.protcent >= 90) grade = 5;
+  //     else if (pupil.protcent >= 80) grade = 4;
+  //     else if (pupil.protcent >= 70) grade = 3;
+  //     else grade = 2;
+
+  //     return {
+  //         ...pupil,
+  //         status: pupil.protcent >= 70 ? "o‘tgan" : "yiqilgan",
+  //         grade,
+  //         isPassed: pupil.protcent >= 70,
+  //     };
+  // });
+
+  // console.log("O‘rtacha protcent:", smtech.toFixed(2));
+  // console.log(updatedPupils);
+
+
+  // 20-masala
+
+
+  // const pupils = [
+  //     { name: "Umidjon", protcent: 95 },
+  //     { name: "Ali", protcent: 78 },
+  //     { name: "Aziz", protcent: 83 },
+  //     { name: "Xumoyun", protcent: 88 },
+  //     { name: "Bobur", protcent: 66 },
+  //     { name: "Fayozbek", protcent: 75 },
+  // ];
+
+  // const result = pupils.reduce(
+  //     (acc, pupil) => {
+  //         if (pupil.protcent >= 70) {
+  //             acc.passed++;
+  //         } else {
+  //             acc.failed++;
+  //         }
+  //         return acc;
+  //     },
+  //     { passed: 0, failed: 0 }
+  // );
+
+  // console.log("Imtihondan o‘tganlar soni:", result.passed);
+  // console.log("Imtihondan o‘ta olmaganlar soni:", result.failed);
